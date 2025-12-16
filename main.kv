@@ -1,0 +1,6324 @@
+<StartScreen>:
+    name: 'start'
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/basa.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Start button
+        Button:
+            background_normal: 'images/start.png'
+            size_hint: 0.2, 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = "home"
+
+<ZWindow>:
+    name: 'z'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'y'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/zoo.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/Z.png'
+            size_hint: 0.19, 0.16
+            pos_hint: {'center_x': 0.37, 'center_y': 0.90}
+
+        Image:
+            source: 'images/zz.png'
+            size_hint: 0.12, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.87}
+
+        Image:
+            source: 'images/Z.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/oo.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.50, 'center_y': 0.29}
+
+        Image:
+            source: 'images/oo.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.29}
+
+        # Text / Label Image
+        Image:
+            source: 'images/zooo.png'
+            size_hint: 0.09, 0.08
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<YWindow>:
+    name: 'y'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'x'
+
+        # Home Button
+        Button:
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'z'
+
+        # Main Image
+        Image:
+            source: 'images/yak.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.60}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/Y.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/yy.png'
+            size_hint: 0.12, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.85}
+
+        Image:
+            source: 'images/Y.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.50, 'center_y': 0.29}
+
+        Image:
+            source: 'images/kk.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.30}
+
+        # Pronunciation Label
+        Label:
+            text: '/jæk/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<XWindow>:
+    name: 'x'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'w'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'y'
+
+
+        # Main Image
+        Image:
+            source: 'images/x-ray.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/X.png'
+            size_hint: 0.19, 0.16
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/xx.png'
+            size_hint: 0.12, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.86}
+
+        Image:
+            source: 'images/X.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/rr.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.51, 'center_y': 0.29}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.28}
+
+        Image:
+            source: 'images/yy.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.59, 'center_y': 0.27}
+
+        # Text / Label Image
+        Image:
+            source: 'images/xrayy.png'
+            size_hint: 0.09, 0.08
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<WWindow>:
+    name: 'w'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'v'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'x'
+
+        # Main Image
+        Image:
+            source: 'images/wig.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/W.png'
+            size_hint: 0.19, 0.18
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/ww.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.44, 'center_y': 0.88}
+
+        Image:
+            source: 'images/W.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/ii.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.51, 'center_y': 0.3}
+
+        Image:
+            source: 'images/gg.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.54, 'center_y': 0.27}
+
+        # Text / Label Image
+        Image:
+            source: 'images/wigg.png'
+            size_hint: 0.09, 0.08
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<VWindow>:
+    name: 'v'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'u'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'w'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/van.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/V.png'
+            size_hint: 0.19, 0.18
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/vv.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.87}
+
+        Image:
+            source: 'images/V.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.51, 'center_y': 0.28}
+
+        Image:
+            source: 'images/nn.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.56, 'center_y': 0.27}
+
+        # Pronunciation Label
+        Label:
+            text: '/væn/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<UWindow>:
+    name: 'u'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 't'
+
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'v'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/urn.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/U.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.37, 'center_y': 0.90}
+
+        Image:
+            source: 'images/uu.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.87}
+
+        Image:
+            source: 'images/U.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/rr.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.50, 'center_y': 0.29}
+
+        Image:
+            source: 'images/nn.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.27}
+
+        # Text / Label Image
+        Image:
+            source: 'images/urnn.png'
+            size_hint: 0.09, 0.08
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<TWindow>:
+    name: 't'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 's'
+
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'u'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/toy.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/T.png'
+            size_hint: 0.19, 0.18
+            pos_hint: {'center_x': 0.38, 'center_y': 0.91}
+
+        Image:
+            source: 'images/tt.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.88}
+
+        Image:
+            source: 'images/T.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/oo.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.49, 'center_y': 0.28}
+
+        Image:
+            source: 'images/yy.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.54, 'center_y': 0.27}
+
+        # Text / Label Image
+        Image:
+            source: 'images/toyy.png'
+            size_hint: 0.09, 0.08
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<SWindow>:
+    name: 's'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'r'
+
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 't'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/sun.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/S.png'
+            size_hint: 0.19, 0.16
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/ss.png'
+            size_hint: 0.12, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.88}
+
+        Image:
+            source: 'images/S.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/uu.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.50, 'center_y': 0.28}
+
+        Image:
+            source: 'images/nn.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.27}
+
+        # Text / Label Image
+        Image:
+            source: 'images/sunn.png'
+            size_hint: 0.09, 0.08
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<RWindow>:
+    name: 'r'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'q'
+
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 's'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/rat.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/R.png'
+            size_hint: 0.19, 0.16
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/rr.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.88}
+
+        Image:
+            source: 'images/R.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.50, 'center_y': 0.28}
+
+        Image:
+            source: 'images/tt.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.27}
+
+        # Pronunciation Label
+        Label:
+            text: '/ræt/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<QWindow>:
+    name: 'q'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'p'
+
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'r'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/queen.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/Q.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/qq.png'
+            size_hint: 0.12, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.86}
+
+        Image:
+            source: 'images/Q.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.4, 'center_y': 0.30}
+
+        Image:
+            source: 'images/uu.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.29}
+
+        Image:
+            source: 'images/ee.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.5, 'center_y': 0.29}
+
+        Image:
+            source: 'images/ee.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.54, 'center_y': 0.29}
+
+        Image:
+            source: 'images/nn.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.58, 'center_y': 0.28}
+
+        # Text / Label Image
+        Image:
+            source: 'images/queenn.png'
+            size_hint: 0.09, 0.08
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<PWindow>:
+    name: 'p'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'o'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'q'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/pen.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/P.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/pp.png'
+            size_hint: 0.13, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.85}
+
+        Image:
+            source: 'images/P.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/ee.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.51, 'center_y': 0.28}
+
+        Image:
+            source: 'images/nn.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.27}
+
+        # Pronunciation Label
+        Label:
+            text: '/pen/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<OWindow>:
+    name: 'o'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'n'
+
+                        # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'p'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/old.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/O.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/oo.png'
+            size_hint: 0.12, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.87}
+
+        Image:
+            source: 'images/O.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/ll.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.50, 'center_y': 0.3}
+
+        Image:
+            source: 'images/dd.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.3}
+
+        # Text / Label Image
+        Image:
+            source: 'images/oldd.png'
+            size_hint: 0.09, 0.08
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<NWindow>:
+    name: 'n'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'm'
+
+                        # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'o'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/net.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/N.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/nn.png'
+            size_hint: 0.12, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.87}
+
+        Image:
+            source: 'images/N.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/ee.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.50, 'center_y': 0.29}
+
+        Image:
+            source: 'images/tt.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.3}
+
+        # Pronunciation Label
+        Label:
+            text: '/net/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<MWindow>:
+    name: 'm'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'l'
+
+        # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'n'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/map.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/M.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/mm.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.44, 'center_y': 0.86}
+
+        Image:
+            source: 'images/M.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.51, 'center_y': 0.29}
+
+        Image:
+            source: 'images/pp.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.56, 'center_y': 0.27}
+
+        # Pronunciation Label
+        Label:
+            text: '/mæp/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<LWindow>:
+    name: 'l'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'k'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'm'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/leg.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/L.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.37, 'center_y': 0.90}
+
+        Image:
+            source: 'images/ll.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.88}
+
+        Image:
+            source: 'images/L.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/ee.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.50, 'center_y': 0.29}
+
+        Image:
+            source: 'images/gg.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.28}
+
+        # Text / Label Image
+        Image:
+            source: 'images/legg.png'
+            size_hint: 0.09, 0.08
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<KWindow>:
+    name: 'k'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'j'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'l'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/keg.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/K.png'
+            size_hint: 0.19, 0.18
+            pos_hint: {'center_x': 0.38, 'center_y': 0.89}
+
+        Image:
+            source: 'images/kk.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.88}
+
+        Image:
+            source: 'images/K.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/ee.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.50, 'center_y': 0.29}
+
+        Image:
+            source: 'images/gg.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.28}
+
+        # Text / Label Image
+        Image:
+            source: 'images/kegg.png'
+            size_hint: 0.09, 0.08
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<JWindow>:
+    name: 'j'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'i'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'k'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/jar.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/J.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/jj.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.87}
+
+        Image:
+            source: 'images/J.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.50, 'center_y': 0.29}
+
+        Image:
+            source: 'images/rr.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.3}
+
+        # Text / Label Image
+        Image:
+            source: 'images/jarr.png'
+            size_hint: 0.09, 0.08
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<IWindow>:
+    name: 'i'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'h'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'j'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/ink.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/I.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/ii.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.89}
+
+        Image:
+            source: 'images/I.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/nn.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.49, 'center_y': 0.28}
+
+        Image:
+            source: 'images/kk.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.3}
+
+        # Text / Label Image
+        Image:
+            source: 'images/inkk.png'
+            size_hint: 0.09, 0.08
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<HWindow>:
+    name: 'h'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'g'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'i'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/hat.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/H.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.39, 'center_y': 0.90}
+
+        Image:
+            source: 'images/hh.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.88}
+
+        Image:
+            source: 'images/H.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.50, 'center_y': 0.29}
+
+        Image:
+            source: 'images/tt.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.3}
+
+        # Pronunciation Label
+        Label:
+            text: '/hæt/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<GWindow>:
+    name: 'g'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'f'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'h'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/gun.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/G.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.39, 'center_y': 0.90}
+
+        Image:
+            source: 'images/gg.png'
+            size_hint: 0.12, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.85}
+
+        Image:
+            source: 'images/G.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/uu.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.50, 'center_y': 0.29}
+
+        Image:
+            source: 'images/nn.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.29}
+
+        # Text / Label Image
+        Image:
+            source: 'images/gunn.png'
+            size_hint: 0.09, 0.08
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<FWindow>:
+    name: 'f'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'e'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'g'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/fan.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/F.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/ff.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.89}
+
+        Image:
+            source: 'images/F.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.50, 'center_y': 0.28}
+
+        Image:
+            source: 'images/nn.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.27}
+
+        # Pronunciation Label
+        Label:
+            text: '/fæn/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<EWindow>:
+    name: 'e'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'd'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'f'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/egg.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/E.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.89}
+
+        Image:
+            source: 'images/ee.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.87}
+
+        Image:
+            source: 'images/E.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/gg.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.49, 'center_y': 0.27}
+
+        Image:
+            source: 'images/gg.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.53, 'center_y': 0.27}
+
+        # Text / Label Image
+        Image:
+            source: 'images/eggg.png'
+            size_hint: 0.09, 0.08
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<DWindow>:
+    name: 'd'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'c'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'e'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/dog.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/D.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/dd.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.44, 'center_y': 0.88}
+
+        Image:
+            source: 'images/D.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/oo.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.50, 'center_y': 0.29}
+
+        Image:
+            source: 'images/gg.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.54, 'center_y': 0.28}
+
+        # Text / Label Image
+        Image:
+            source: 'images/dogg.png'
+            size_hint: 0.09, 0.08
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<CWindow>:
+    name: 'c'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'b'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'd'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/cat.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/C.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/cc.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.87}
+
+        Image:
+            source: 'images/C.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.50, 'center_y': 0.29}
+
+        Image:
+            source: 'images/tt.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.54, 'center_y': 0.3}
+
+        # Pronunciation Label
+        Label:
+            text: '/kæt/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<BWindow>:
+    name: 'b'
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'a'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'c'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/bat.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/B.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.89}
+
+        Image:
+            source: 'images/bb.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.88}
+
+        Image:
+            source: 'images/B.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.50, 'center_y': 0.29}
+
+        Image:
+            source: 'images/tt.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.54, 'center_y': 0.3}
+
+        # Pronunciation Label
+        Label:
+            text: '/bæt/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<EyWindow>:
+    name: 'ey'
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'b'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/ant.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/A.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.11, 0.11
+            pos_hint: {'center_x': 0.43, 'center_y': 0.87}
+
+        Image:
+            source: 'images/A.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/nn.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.48, 'center_y': 0.28}
+
+        Image:
+            source: 'images/tt.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.53, 'center_y': 0.29}
+
+        # Pronunciation Label
+        Label:
+            text: '/ænt/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<YaWindow>:
+    name: 'ya'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'wa'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alpabeto'
+
+        # Main Image
+        Image:
+            source: 'images/yoyo.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/Y.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/yy.png'
+            size_hint: 0.11, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.85}
+
+        Image:
+            source: 'images/Y.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/oo.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.47, 'center_y': 0.29}
+
+        Image:
+            source: 'images/yy.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.52, 'center_y': 0.28}
+
+        Image:
+            source: 'images/oo.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.56, 'center_y': 0.29}
+
+        # Pronunciation Label
+        Label:
+            text: '/yo-yo/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<WaWindow>:
+    name: 'wa'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'uu'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ya'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alpabeto'
+
+        # Main Image
+        Image:
+            source: 'images/wala.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/W.png'
+            size_hint: 0.19, 0.18
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/ww.png'
+            size_hint: 0.11, 0.11
+            pos_hint: {'center_x': 0.43, 'center_y': 0.88}
+
+        Image:
+            source: 'images/W.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.49, 'center_y': 0.29}
+
+        Image:
+            source: 'images/ll.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.53, 'center_y': 0.3}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.57, 'center_y': 0.29}
+
+        # Pronunciation Label
+        Label:
+            text: '/wa-lâ/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<UuWindow>:
+    name: 'uu'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ta'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'wa'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alpabeto'
+
+        # Main Image
+        Image:
+            source: 'images/unan.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/U.png'
+            size_hint: 0.19, 0.18
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/uu.png'
+            size_hint: 0.11, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.88}
+
+        Image:
+            source: 'images/U.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.44, 'center_y': 0.30}
+
+        Image:
+            source: 'images/nn.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.48, 'center_y': 0.29}
+
+        Image:
+            source: 'images/nn.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.53, 'center_y': 0.3}
+
+        Image:
+            source: 'images/nn.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.57, 'center_y': 0.29}
+
+        # Pronunciation Label
+        Label:
+            text: '/u-nan/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<TaWindow>:
+    name: 'ta'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'sa'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'uu'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alpabeto'
+
+        # Main Image
+        Image:
+            source: 'images/tasa.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/T.png'
+            size_hint: 0.19, 0.18
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/tt.png'
+            size_hint: 0.11, 0.11
+            pos_hint: {'center_x': 0.43, 'center_y': 0.87}
+
+        Image:
+            source: 'images/T.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.48, 'center_y': 0.29}
+
+        Image:
+            source: 'images/ss.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.53, 'center_y': 0.29}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.58, 'center_y': 0.29}
+
+        # Pronunciation Label
+        Label:
+            text: '/ta-sa/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<SaWindow>:
+    name: 'sa'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ra'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ta'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alpabeto'
+
+        # Main Image
+        Image:
+            source: 'images/susi.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/S.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/ss.png'
+            size_hint: 0.11, 0.11
+            pos_hint: {'center_x': 0.43, 'center_y': 0.87}
+
+        Image:
+            source: 'images/S.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/uu.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.48, 'center_y': 0.29}
+
+        Image:
+            source: 'images/ss.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.53, 'center_y': 0.3}
+
+        Image:
+            source: 'images/ii.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.57, 'center_y': 0.31}
+
+        # Pronunciation Label
+        Label:
+            text: '/su-sì/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<RaWindow>:
+    name: 'ra'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'pa'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'sa'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alpabeto'
+
+        # Main Image
+        Image:
+            source: 'images/relo.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/R.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/rr.png'
+            size_hint: 0.11, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.88}
+
+        Image:
+            source: 'images/R.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/ee.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.48, 'center_y': 0.29}
+
+        Image:
+            source: 'images/ll.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.52, 'center_y': 0.3}
+
+        Image:
+            source: 'images/oo.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.29}
+
+        # Pronunciation Label
+        Label:
+            text: '/re-ló/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<PaWindow>:
+    name: 'pa'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'oo'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ra'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alpabeto'
+
+        # Main Image
+        Image:
+            source: 'images/pala.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/P.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/pp.png'
+            size_hint: 0.11, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.85}
+
+        Image:
+            source: 'images/P.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.48, 'center_y': 0.29}
+
+        Image:
+            source: 'images/ll.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.52, 'center_y': 0.29}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.29}
+
+        # Pronunciation Label
+        Label:
+            text: '/pa-la/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<OoWindow>:
+    name: 'oo'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'na'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'pa'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alpabeto'
+
+        # Main Image
+        Image:
+            source: 'images/oso.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/O.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/oo.png'
+            size_hint: 0.11, 0.11
+            pos_hint: {'center_x': 0.43, 'center_y': 0.87}
+
+        Image:
+            source: 'images/O.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/ss.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.5, 'center_y': 0.28}
+
+        Image:
+            source: 'images/oo.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.54, 'center_y': 0.28}
+
+        # Pronunciation Label
+        Label:
+            text: '/o-so/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<NaWindow>:
+    name: 'na'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ma'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'oo'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alpabeto'
+
+        # Main Image
+        Image:
+            source: 'images/nota.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/N.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/nn.png'
+            size_hint: 0.11, 0.11
+            pos_hint: {'center_x': 0.43, 'center_y': 0.86}
+
+        Image:
+            source: 'images/N.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/oo.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.47, 'center_y': 0.29}
+
+        Image:
+            source: 'images/tt.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.51, 'center_y': 0.3}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.29}
+
+        # Pronunciation Label
+        Label:
+            text: '/no-ta/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<MaWindow>:
+    name: 'ma'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'la'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'na'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alpabeto'
+
+        # Main Image
+        Image:
+            source: 'images/mata.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/M.png'
+            size_hint: 0.19, 0.18
+            pos_hint: {'center_x': 0.37, 'center_y': 0.90}
+
+        Image:
+            source: 'images/mm.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.44, 'center_y': 0.86}
+
+        Image:
+            source: 'images/M.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.49, 'center_y': 0.29}
+
+        Image:
+            source: 'images/tt.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.53, 'center_y': 0.3}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.57, 'center_y': 0.29}
+
+        # Pronunciation Label
+        Label:
+            text: '/ma-ta/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<LaWindow>:
+    name: 'la'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ii'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ma'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alpabeto'
+
+        # Main Image
+        Image:
+            source: 'images/laso.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/L.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/ll.png'
+            size_hint: 0.11, 0.11
+            pos_hint: {'center_x': 0.43, 'center_y': 0.87}
+
+        Image:
+            source: 'images/L.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.48, 'center_y': 0.29}
+
+        Image:
+            source: 'images/ss.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.52, 'center_y': 0.29}
+
+        Image:
+            source: 'images/oo.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.56, 'center_y': 0.28}
+
+        # Pronunciation Label
+        Label:
+            text: '/la-so/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<IiWindow>:
+    name: 'ii'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'y'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'la'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alpabeto'
+
+        # Main Image
+        Image:
+            source: 'images/isda.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/I.png'
+            size_hint: 0.19, 0.18
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/ii.png'
+            size_hint: 0.11, 0.12
+            pos_hint: {'center_x': 0.43, 'center_y': 0.89}
+
+        Image:
+            source: 'images/I.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/ss.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.47, 'center_y': 0.29}
+
+        Image:
+            source: 'images/dd.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.51, 'center_y': 0.3}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.29}
+
+        # Pronunciation Label
+        Label:
+            text: '/is-dâ/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<HaWindow>:
+    name: 'ha'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ga'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ii'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/hari.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/H.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.39, 'center_y': 0.90}
+
+        Image:
+            source: 'images/hh.png'
+            size_hint: 0.12, 0.11
+            pos_hint: {'center_x': 0.43, 'center_y': 0.88}
+
+        Image:
+            source: 'images/H.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.48, 'center_y': 0.29}
+
+        Image:
+            source: 'images/rr.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.52, 'center_y': 0.3}
+
+        Image:
+            source: 'images/ii.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.56, 'center_y': 0.3}
+
+         # Pronunciation Label
+        Label:
+            text: '/ha-rì/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<GaWindow>:
+    name: 'ga'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ee'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ha'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alpabeto'
+
+        # Main Image
+        Image:
+            source: 'images/guro.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/G.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.39, 'center_y': 0.90}
+
+        Image:
+            source: 'images/gg.png'
+            size_hint: 0.12, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.85}
+
+        Image:
+            source: 'images/G.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/uu.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.47, 'center_y': 0.29}
+
+        Image:
+            source: 'images/rr.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.51, 'center_y': 0.3}
+
+        Image:
+            source: 'images/oo.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.29}
+
+        # Pronunciation Label
+        Label:
+            text: '/gu-rò/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<EeWindow>:
+    name: 'ee'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'da'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ga'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alphabet'
+
+        # Main Image
+        Image:
+            source: 'images/ekis.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/E.png'
+            size_hint: 0.19, 0.18
+            pos_hint: {'center_x': 0.38, 'center_y': 0.89}
+
+        Image:
+            source: 'images/ee.png'
+            size_hint: 0.11, 0.11
+            pos_hint: {'center_x': 0.43, 'center_y': 0.87}
+
+        Image:
+            source: 'images/E.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.29}
+
+        Image:
+            source: 'images/kk.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.50, 'center_y': 0.3}
+
+        Image:
+            source: 'images/ii.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.53, 'center_y': 0.3}
+
+        Image:
+            source: 'images/ss.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.56, 'center_y': 0.28}
+
+        # Pronunciation Label
+        Label:
+            text: '/e-kis/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<DaWindow>:
+    name: 'da'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ka'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ee'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alpabeto'
+
+        # Main Image
+        Image:
+            source: 'images/daga.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/D.png'
+            size_hint: 0.17, 0.18
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/dd.png'
+            size_hint: 0.12, 0.12
+            pos_hint: {'center_x': 0.44, 'center_y': 0.88}
+
+        Image:
+            source: 'images/D.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.48, 'center_y': 0.29}
+
+        Image:
+            source: 'images/gg.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.52, 'center_y': 0.28}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.57, 'center_y': 0.29}
+
+        # Pronunciation Label
+        Label:
+            text: '/da-gâ/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<KaWindow>:
+    name: 'ka'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ba'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'da'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alpabeto'
+
+        # Main Image
+        Image:
+            source: 'images/kama.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/K.png'
+            size_hint: 0.19, 0.18
+            pos_hint: {'center_x': 0.38, 'center_y': 0.89}
+
+        Image:
+            source: 'images/kk.png'
+            size_hint: 0.11, 0.11
+            pos_hint: {'center_x': 0.43, 'center_y': 0.88}
+
+        Image:
+            source: 'images/K.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.48, 'center_y': 0.3}
+
+        Image:
+            source: 'images/mm.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.53, 'center_y': 0.29}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.58, 'center_y': 0.3}
+
+        # Pronunciation Label
+        Label:
+            text: '/ka-ma/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<BaWindow>:
+    name: 'ba'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'a'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ka'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alpabeto'
+
+        # Main Image
+        Image:
+            source: 'images/bata.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/B.png'
+            size_hint: 0.19, 0.18
+            pos_hint: {'center_x': 0.38, 'center_y': 0.89}
+
+        Image:
+            source: 'images/bb.png'
+            size_hint: 0.11, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.88}
+
+        Image:
+            source: 'images/B.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.48, 'center_y': 0.29}
+
+        Image:
+            source: 'images/tt.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.53, 'center_y': 0.3}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.58, 'center_y': 0.29}
+
+        # Pronunciation Label
+        Label:
+            text: '/ba-tà/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<AWindow>:
+    name: 'a'
+
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'ba'
+
+        # Home Button
+        Button:
+            id: btn_home
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'alpabeto'
+
+        # Main Image
+        Image:
+            source: 'images/aso.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # Decorative Images
+        Image:
+            source: 'images/guidee.png'
+            size_hint: 0.26, 0.26
+            pos_hint: {'center_x': 0.40, 'center_y': 0.90}
+
+        Image:
+            source: 'images/A.png'
+            size_hint: 0.19, 0.17
+            pos_hint: {'center_x': 0.38, 'center_y': 0.90}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.11, 0.11
+            pos_hint: {'center_x': 0.43, 'center_y': 0.87}
+
+        Image:
+            source: 'images/A.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.30}
+
+        Image:
+            source: 'images/ss.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.5, 'center_y': 0.28}
+
+        Image:
+            source: 'images/oo.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.54, 'center_y': 0.29}
+
+        # Pronunciation Label
+        Label:
+            text: '/a-so/'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.20}
+
+        # Speaker Button
+        Button:
+            id: btn_speaker
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.30}
+            on_press: root.play_audio()
+
+<TenWindow>:
+    name: 'ten'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: "images/bbb.png"
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # MAIN IMAGE
+        Image:
+            source: "images/10.png"
+            size_hint: 0.5, 0.5
+            pos_hint: {"center_x": 0.5, "center_y": 0.60}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: "images/T.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.45, "center_y": 0.30}
+
+        Image:
+            source: "images/ee.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.5, "center_y": 0.28}
+
+        Image:
+            source: "images/nn.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.55, "center_y": 0.27}
+
+        # LABEL
+        Label:
+            text: '/ten/'
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+
+        # HOME BUTTON
+        Button:
+            id: btn_home
+            background_normal: "images/home.png"
+            size_hint: 0.1, 0.14
+            pos_hint: {"center_x": 0.6, "center_y": 0.1}
+            on_release:
+                app.root.current = "numbers"
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'nine'
+
+        # SPEAKER BUTTON
+        Button:
+            id: btn_speaker
+            background_normal: "images/speaker.png"
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {"center_x": 0.63, "center_y": 0.30}
+            on_release: root.play_audio()
+
+<NineWindow>:
+    name: 'nine'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: "images/bbb.png"
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # MAIN IMAGE
+        Image:
+            source: "images/9.png"
+            size_hint: 0.5, 0.5
+            pos_hint: {"center_x": 0.5, "center_y": 0.60}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: "images/N.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.45, "center_y": 0.30}
+
+        Image:
+            source: "images/ii.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.50, "center_y": 0.31}
+
+        Image:
+            source: "images/nn.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.53, "center_y": 0.28}
+
+        Image:
+            source: "images/ee.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.58, "center_y": 0.28}
+
+        # LABEL IMAGE
+        Image:
+            source: "images/nain.png"
+            size_hint: 0.09, 0.08
+            pos_hint: {"center_x": 0.5, "center_y": 0.2}
+
+        # HOME BUTTON
+        Button:
+            id: btn_home
+            background_normal: "images/home.png"
+            size_hint: 0.1, 0.14
+            pos_hint: {"center_x": 0.6, "center_y": 0.1}
+            on_release:
+                app.root.current = "numbers"
+
+        # NEXT BUTTON
+        Button:
+            id: btn_next
+            background_normal: "images/next.png"
+            size_hint: 0.1, 0.15
+            pos_hint: {"center_x": 0.5, "center_y": 0.1}
+            on_release:
+                app.root.current = "ten"
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'eight'
+
+        # SPEAKER BUTTON
+        Button:
+            id: btn_speaker
+            background_normal: "images/speaker.png"
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {"center_x": 0.63, "center_y": 0.30}
+            on_release: root.play_audio()
+
+<EightWindow>:
+    name: 'eight'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: "images/bbb.png"
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # MAIN IMAGE
+        Image:
+            source: "images/8.png"
+            size_hint: 0.5, 0.5
+            pos_hint: {"center_x": 0.5, "center_y": 0.60}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: "images/E.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.45, "center_y": 0.30}
+
+        Image:
+            source: "images/ii.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.49, "center_y": 0.31}
+
+        Image:
+            source: "images/gg.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.51, "center_y": 0.27}
+
+        Image:
+            source: "images/hh.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.55, "center_y": 0.3}
+
+        Image:
+            source: "images/tt.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.59, "center_y": 0.3}
+
+        # LABEL IMAGE
+        Image:
+            source: "images/eit.png"
+            size_hint: 0.09, 0.08
+            pos_hint: {"center_x": 0.5, "center_y": 0.2}
+
+        # HOME BUTTON
+        Button:
+            id: btn_home
+            background_normal: "images/home.png"
+            size_hint: 0.1, 0.14
+            pos_hint: {"center_x": 0.6, "center_y": 0.1}
+            on_release:
+                app.root.current = "numbers"
+
+        # NEXT BUTTON
+        Button:
+            id: btn_next
+            background_normal: "images/next.png"
+            size_hint: 0.1, 0.15
+            pos_hint: {"center_x": 0.5, "center_y": 0.1}
+            on_release:
+                app.root.current = "nine"
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'seven'
+
+        # SPEAKER BUTTON
+        Button:
+            id: btn_speaker
+            background_normal: "images/speaker.png"
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {"center_x": 0.63, "center_y": 0.30}
+            on_release: root.play_audio()
+
+<SevenWindow>:
+    name: 'seven'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: "images/bbb.png"
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # MAIN IMAGE
+        Image:
+            source: "images/7.png"
+            size_hint: 0.5, 0.5
+            pos_hint: {"center_x": 0.5, "center_y": 0.60}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: "images/S.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.4, "center_y": 0.30}
+
+        Image:
+            source: "images/ee.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.45, "center_y": 0.29}
+
+        Image:
+            source: "images/vv.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.49, "center_y": 0.29}
+
+        Image:
+            source: "images/ee.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.54, "center_y": 0.29}
+
+        Image:
+            source: "images/nn.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.58, "center_y": 0.28}
+
+        # LABEL IMAGE
+        Image:
+            source: "images/sev.png"
+            size_hint: 0.09, 0.08
+            pos_hint: {"center_x": 0.5, "center_y": 0.2}
+
+        # HOME BUTTON
+        Button:
+            id: btn_home
+            background_normal: "images/home.png"
+            size_hint: 0.1, 0.14
+            pos_hint: {"center_x": 0.6, "center_y": 0.1}
+            on_release:
+                app.root.current = "numbers"
+
+        # NEXT BUTTON
+        Button:
+            id: btn_next
+            background_normal: "images/next.png"
+            size_hint: 0.1, 0.15
+            pos_hint: {"center_x": 0.5, "center_y": 0.1}
+            on_release:
+                app.root.current = "eight"
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'six'
+
+        # SPEAKER BUTTON
+        Button:
+            id: btn_speaker
+            background_normal: "images/speaker.png"
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {"center_x": 0.63, "center_y": 0.30}
+            on_release: root.play_audio()
+
+<SixWindow>:
+    name: 'six'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: "images/bbb.png"
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # MAIN IMAGE
+        Image:
+            source: "images/6.png"
+            size_hint: 0.5, 0.5
+            pos_hint: {"center_x": 0.5, "center_y": 0.60}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: "images/S.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.48, "center_y": 0.30}
+
+        Image:
+            source: "images/ii.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.53, "center_y": 0.31}
+
+        Image:
+            source: "images/xx.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.56, "center_y": 0.27}
+
+        # LABEL IMAGE
+        Image:
+            source: "images/siks.png"
+            size_hint: 0.09, 0.08
+            pos_hint: {"center_x": 0.5, "center_y": 0.2}
+
+        # HOME BUTTON
+        Button:
+            id: btn_home
+            background_normal: "images/home.png"
+            size_hint: 0.1, 0.14
+            pos_hint: {"center_x": 0.6, "center_y": 0.1}
+            on_release:
+                app.root.current = "numbers"
+
+        # NEXT BUTTON
+        Button:
+            id: btn_next
+            background_normal: "images/next.png"
+            size_hint: 0.1, 0.15
+            pos_hint: {"center_x": 0.5, "center_y": 0.1}
+            on_release:
+                app.root.current = "seven"
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'five'
+
+        # SPEAKER BUTTON
+        Button:
+            id: btn_speaker
+            background_normal: "images/speaker.png"
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {"center_x": 0.63, "center_y": 0.30}
+            on_release: root.play_audio()
+
+<FiveWindow>:
+    name: 'five'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: "images/bbb.png"
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # MAIN IMAGE
+        Image:
+            source: "images/5.png"
+            size_hint: 0.5, 0.5
+            pos_hint: {"center_x": 0.5, "center_y": 0.60}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: "images/F.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.45, "center_y": 0.30}
+
+        Image:
+            source: "images/ii.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.50, "center_y": 0.29}
+
+        Image:
+            source: "images/vv.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.52, "center_y": 0.27}
+
+        Image:
+            source: "images/ee.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.57, "center_y": 0.27}
+
+        # LABEL IMAGE
+        Image:
+            source: "images/faiv.png"
+            size_hint: 0.09, 0.08
+            pos_hint: {"center_x": 0.5, "center_y": 0.2}
+
+        # HOME BUTTON
+        Button:
+            id: btn_home
+            background_normal: "images/home.png"
+            size_hint: 0.1, 0.14
+            pos_hint: {"center_x": 0.6, "center_y": 0.1}
+            on_release:
+                app.root.current = "numbers"
+
+        # NEXT BUTTON
+        Button:
+            id: btn_next
+            background_normal: "images/next.png"
+            size_hint: 0.1, 0.15
+            pos_hint: {"center_x": 0.5, "center_y": 0.1}
+            on_release:
+                app.root.current = "six"
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'four'
+
+        # SPEAKER BUTTON
+        Button:
+            id: btn_speaker
+            background_normal: "images/speaker.png"
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {"center_x": 0.63, "center_y": 0.30}
+            on_release: root.play_audio()
+
+<FourWindow>:
+    name: 'four'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: "images/bbb.png"
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # MAIN IMAGE
+        Image:
+            source: "images/4.png"
+            size_hint: 0.5, 0.5
+            pos_hint: {"center_x": 0.5, "center_y": 0.60}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: "images/F.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.45, "center_y": 0.30}
+
+        Image:
+            source: "images/oo.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.49, "center_y": 0.29}
+
+        Image:
+            source: "images/uu.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.54, "center_y": 0.29}
+
+        Image:
+            source: "images/rr.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.58, "center_y": 0.3}
+
+        # LABEL IMAGE
+        Image:
+            source: "images/for.png"
+            size_hint: 0.09, 0.08
+            pos_hint: {"center_x": 0.5, "center_y": 0.2}
+
+        # HOME BUTTON
+        Button:
+            id: btn_home
+            background_normal: "images/home.png"
+            size_hint: 0.1, 0.14
+            pos_hint: {"center_x": 0.6, "center_y": 0.1}
+            on_release:
+                app.root.current = "numbers"
+
+        # NEXT BUTTON
+        Button:
+            id: btn_next
+            background_normal: "images/next.png"
+            size_hint: 0.1, 0.15
+            pos_hint: {"center_x": 0.5, "center_y": 0.1}
+            on_release:
+                app.root.current = "five"
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'three'
+
+        # SPEAKER BUTTON
+        Button:
+            id: btn_speaker
+            background_normal: "images/speaker.png"
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {"center_x": 0.63, "center_y": 0.30}
+            on_release: root.play_audio()
+
+<ThreeWindow>:
+    name: 'three'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: "images/bbb.png"
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # MAIN IMAGE
+        Image:
+            source: "images/3.png"
+            size_hint: 0.5, 0.5
+            pos_hint: {"center_x": 0.5, "center_y": 0.60}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: "images/T.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.42, "center_y": 0.30}
+
+        Image:
+            source: "images/hh.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.46, "center_y": 0.29}
+
+        Image:
+            source: "images/rr.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.5, "center_y": 0.29}
+
+        Image:
+            source: "images/ee.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.54, "center_y": 0.28}
+
+        Image:
+            source: "images/ee.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.58, "center_y": 0.28}
+
+        # LABEL IMAGE
+        Image:
+            source: "images/ori.png"
+            size_hint: 0.09, 0.08
+            pos_hint: {"center_x": 0.5, "center_y": 0.2}
+
+        # HOME BUTTON
+        Button:
+            id: btn_home
+            background_normal: "images/home.png"
+            size_hint: 0.1, 0.14
+            pos_hint: {"center_x": 0.6, "center_y": 0.1}
+            on_release:
+                app.root.current = "numbers"
+
+        # NEXT BUTTON
+        Button:
+            id: btn_next
+            background_normal: "images/next.png"
+            size_hint: 0.1, 0.15
+            pos_hint: {"center_x": 0.5, "center_y": 0.1}
+            on_release:
+                app.root.current = "four"
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'two'
+
+        # SPEAKER BUTTON
+        Button:
+            id: btn_speaker
+            background_normal: "images/speaker.png"
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {"center_x": 0.63, "center_y": 0.30}
+            on_release: root.play_audio()
+
+<TwoWindow>:
+    name: 'two'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: "images/bbb.png"
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # MAIN IMAGE
+        Image:
+            source: "images/2.png"
+            size_hint: 0.5, 0.5
+            pos_hint: {"center_x": 0.5, "center_y": 0.60}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: "images/T.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.45, "center_y": 0.30}
+
+        Image:
+            source: "images/ww.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.50, "center_y": 0.29}
+
+        Image:
+            source: "images/oo.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.55, "center_y": 0.28}
+
+        # LABEL IMAGE
+        Image:
+            source: "images/tu.png"
+            size_hint: 0.09, 0.08
+            pos_hint: {"center_x": 0.5, "center_y": 0.2}
+
+        # HOME BUTTON
+        Button:
+            id: btn_home
+            background_normal: "images/home.png"
+            size_hint: 0.1, 0.14
+            pos_hint: {"center_x": 0.6, "center_y": 0.1}
+            on_release:
+                app.root.current = "numbers"
+
+        # NEXT BUTTON
+        Button:
+            id: btn_next
+            background_normal: "images/next.png"
+            size_hint: 0.1, 0.15
+            pos_hint: {"center_x": 0.5, "center_y": 0.1}
+            on_release:
+                app.root.current = "three"
+
+        # Return Button
+        Button:
+            id: btn_return
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'one'
+
+        # SPEAKER BUTTON
+        Button:
+            id: btn_speaker
+            background_normal: "images/speaker.png"
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {"center_x": 0.63, "center_y": 0.30}
+            on_release: root.play_audio()
+
+<OneWindow>:
+    name: 'one'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: "images/bbb.png"
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # MAIN IMAGE
+        Image:
+            source: "images/1.png"
+            size_hint: 0.5, 0.5
+            pos_hint: {"center_x": 0.5, "center_y": 0.60}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: "images/O.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.45, "center_y": 0.30}
+
+        Image:
+            source: "images/nn.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.50, "center_y": 0.28}
+
+        Image:
+            source: "images/ee.png"
+            size_hint: 0.13, 0.13
+            pos_hint: {"center_x": 0.55, "center_y": 0.29}
+
+        # LABEL IMAGE
+        Image:
+            source: "images/wan.png"
+            size_hint: 0.09, 0.08
+            pos_hint: {"center_x": 0.5, "center_y": 0.2}
+
+        # HOME BUTTON
+        Button:
+            id: btn_home
+            background_normal:"images/home.png"
+            size_hint: 0.1, 0.14
+            pos_hint: {"center_x": 0.6, "center_y": 0.1}
+            on_release:app.root.current = "numbers"
+
+        # NEXT BUTTON
+        Button:
+            id: btn_next
+            background_normal: "images/next.png"
+            size_hint: 0.1, 0.15
+            pos_hint: {"center_x": 0.4, "center_y": 0.1}
+            on_release:
+                app.root.current = "two"
+
+        # SPEAKER BUTTON
+        Button:
+            id: btn_speaker
+            background_normal: "images/speaker.png"
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {"center_x": 0.63, "center_y": 0.30}
+            on_release: root.play_audio()
+
+<SampuWindow>:
+    name: 'sampu'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # RETURN BUTTON
+        Button:
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press: root.manager.current = 'siyam'
+
+        # HOME BUTTON
+        Button:
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press: root.manager.current = 'bilang'
+
+        # MAIN IMAGE
+        Image:
+            source: 'images/10.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: 'images/S.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.39, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.44, 'center_y': 0.29}
+
+        Image:
+            source: 'images/mm.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.49, 'center_y': 0.28}
+
+        Image:
+            source: 'images/pp.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.54, 'center_y': 0.27}
+
+        Image:
+            source: 'images/uu.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.58, 'center_y': 0.29}
+
+        # LABEL
+        Label:
+            text: '/sam-pu/'
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+
+        # SPEAKER BUTTON
+        Button:
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.3}
+            on_press: root.play_audio()
+
+<SiyamWindow>:
+    name: 'siyam'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # RETURN BUTTON
+        Button:
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press: root.manager.current = 'walo'
+
+        # NEXT BUTTON
+        Button:
+            id: btn_next
+            background_normal: "images/next.png"
+            size_hint: 0.1, 0.15
+            pos_hint: {"center_x": 0.5, "center_y": 0.1}
+            on_release:
+                app.root.current = "sampu"
+
+        # HOME BUTTON
+        Button:
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press: root.manager.current = 'bilang'
+
+        # MAIN IMAGE
+        Image:
+            source: 'images/9.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: 'images/S.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.4, 'center_y': 0.3}
+
+        Image:
+            source: 'images/ii.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.45, 'center_y': 0.3}
+
+        Image:
+            source: 'images/yy.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.48, 'center_y': 0.27}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.53, 'center_y': 0.29}
+
+        Image:
+            source: 'images/mm.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.58, 'center_y': 0.28}
+
+        # LABEL
+        Label:
+            text: '/si-yam/'
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+
+        # SPEAKER BUTTON
+        Button:
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.3}
+            on_press: root.play_audio()
+
+<WaloWindow>:
+    name: 'walo'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # RETURN BUTTON
+        Button:
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press: root.manager.current = 'pito'
+
+        # NEXT BUTTON
+        Button:
+            id: btn_next
+            background_normal: "images/next.png"
+            size_hint: 0.1, 0.15
+            pos_hint: {"center_x": 0.5, "center_y": 0.1}
+            on_release:
+                app.root.current = "siyam"
+
+        # HOME BUTTON
+        Button:
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press: root.manager.current = 'bilang'
+
+        # MAIN IMAGE
+        Image:
+            source: 'images/8.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: 'images/W.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.49, 'center_y': 0.29}
+
+        Image:
+            source: 'images/ll.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.53, 'center_y': 0.29}
+
+        Image:
+            source: 'images/oo.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.56, 'center_y': 0.28}
+
+        # LABEL
+        Label:
+            text: '/wa-lo/'
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+
+        # SPEAKER BUTTON
+        Button:
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.3}
+            on_press: root.play_audio()
+
+<PitoWindow>:
+    name: 'pito'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # RETURN BUTTON
+        Button:
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press: root.manager.current = 'anim'
+
+        # NEXT BUTTON
+        Button:
+            id: btn_next
+            background_normal: "images/next.png"
+            size_hint: 0.1, 0.15
+            pos_hint: {"center_x": 0.5, "center_y": 0.1}
+            on_release:
+                app.root.current = "walo"
+
+        # HOME BUTTON
+        Button:
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press: root.manager.current = 'bilang'
+
+        # MAIN IMAGE
+        Image:
+            source: 'images/7.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: 'images/P.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.44, 'center_y': 0.30}
+
+        Image:
+            source: 'images/ii.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.49, 'center_y': 0.29}
+
+        Image:
+            source: 'images/tt.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.52, 'center_y': 0.29}
+
+        Image:
+            source: 'images/oo.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.28}
+
+        # LABEL
+        Label:
+            text: '/pi-to/'
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+
+        # SPEAKER BUTTON
+        Button:
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.3}
+            on_press: root.play_audio()
+
+<AnimWindow>:
+    name: 'anim'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # RETURN BUTTON
+        Button:
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press: root.manager.current = 'lima'
+
+        # NEXT BUTTON
+        Button:
+            id: btn_next
+            background_normal: "images/next.png"
+            size_hint: 0.1, 0.15
+            pos_hint: {"center_x": 0.5, "center_y": 0.1}
+            on_release:
+                app.root.current = "pito"
+
+        # HOME BUTTON
+        Button:
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press: root.manager.current = 'bilang'
+
+        # MAIN IMAGE
+        Image:
+            source: 'images/6.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: 'images/A.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/nn.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.48, 'center_y': 0.28}
+
+        Image:
+            source: 'images/ii.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.53, 'center_y': 0.3}
+
+        Image:
+            source: 'images/mm.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.57, 'center_y': 0.28}
+
+        # LABEL
+        Label:
+            text: '/a-nim/'
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+
+        # SPEAKER BUTTON
+        Button:
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.3}
+            on_press: root.play_audio()
+
+<LimaWindow>:
+    name: 'lima'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # RETURN BUTTON
+        Button:
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press: root.manager.current = 'apat'
+
+        # NEXT BUTTON
+        Button:
+            id: btn_next
+            background_normal: "images/next.png"
+            size_hint: 0.1, 0.15
+            pos_hint: {"center_x": 0.5, "center_y": 0.1}
+            on_release:
+                app.root.current = "anim"
+
+        # HOME BUTTON
+        Button:
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press: root.manager.current = 'bilang'
+
+        # MAIN IMAGE
+        Image:
+            source: 'images/5.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: 'images/L.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/ii.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.48, 'center_y': 0.31}
+
+        Image:
+            source: 'images/mm.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.52, 'center_y': 0.27}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.58, 'center_y': 0.28}
+
+        # LABEL
+        Label:
+            text: '/li-ma/'
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+
+        # SPEAKER BUTTON
+        Button:
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.3}
+            on_press: root.play_audio()
+
+<ApatWindow>:
+    name: 'apat'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # RETURN BUTTON
+        Button:
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press: root.manager.current = 'tatlo'
+
+        # NEXT BUTTON
+        Button:
+            id: btn_next
+            background_normal: "images/next.png"
+            size_hint: 0.1, 0.15
+            pos_hint: {"center_x": 0.5, "center_y": 0.1}
+            on_release:app.root.current = "lima"
+
+        # HOME BUTTON
+        Button:
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press: root.manager.current = 'bilang'
+
+        # MAIN IMAGE
+        Image:
+            source: 'images/4.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: 'images/A.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/pp.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.49, 'center_y': 0.27}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.54, 'center_y': 0.29}
+
+        Image:
+            source: 'images/tt.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.58, 'center_y': 0.29}
+
+        # LABEL
+        Label:
+            text: '/a-pat/'
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+
+        # SPEAKER BUTTON
+        Button:
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.3}
+            on_press: root.play_audio()
+
+<TatloWindow>:
+    name: 'tatlo'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # RETURN BUTTON
+        Button:
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press: root.manager.current = 'dalawa'
+
+        # HOME BUTTON
+        Button:
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press: root.manager.current = 'bilang'
+
+                # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'apat'
+
+        # MAIN IMAGE
+        Image:
+            source: 'images/3.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: 'images/T.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.43, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.48, 'center_y': 0.29}
+
+        Image:
+            source: 'images/tt.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.52, 'center_y': 0.29}
+
+        Image:
+            source: 'images/ll.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.55, 'center_y': 0.29}
+
+        Image:
+            source: 'images/oo.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.57, 'center_y': 0.28}
+
+        # LABEL
+        Label:
+            text: '/tat-lo/'
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+
+        # SPEAKER BUTTON
+        Button:
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.3}
+            on_press: root.play_audio()
+
+<DalawaWindow>:
+    name: 'dalawa'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # RETURN BUTTON
+        Button:
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.4, 'center_y': 0.1}
+            on_press: root.manager.current = 'isa'
+
+        # HOME BUTTON
+        Button:
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press: root.manager.current = 'bilang'
+
+        # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'tatlo'
+
+        # MAIN IMAGE
+        Image:
+            source: 'images/2.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: 'images/D.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.37, 'center_y': 0.30}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.42, 'center_y': 0.29}
+
+        Image:
+            source: 'images/ll.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.46, 'center_y': 0.3}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.49, 'center_y': 0.29}
+
+        Image:
+            source: 'images/ww.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.53, 'center_y': 0.3}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.59, 'center_y': 0.29}
+
+        # LABEL
+        Label:
+            text: '/da-la-wa/'
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+
+        # SPEAKER BUTTON
+        Button:
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.3}
+            on_press: root.play_audio()
+
+<IsaWindow>:
+    name: 'isa'
+    FloatLayout:
+
+        # BACKGROUND
+        Image:
+            source: 'images/bbb.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Next Button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = 'dalawa'
+
+        # HOME BUTTON
+        Button:
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.14
+            pos_hint: {'center_x': 0.6, 'center_y': 0.1}
+            on_press: root.manager.current = 'bilang'
+
+        # MAIN IMAGE
+        Image:
+            source: 'images/1.png'
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        # DECORATIVE IMAGES
+        Image:
+            source: 'images/I.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.46, 'center_y': 0.30}
+
+        Image:
+            source: 'images/ss.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.49, 'center_y': 0.29}
+
+        Image:
+            source: 'images/aa.png'
+            size_hint: 0.13, 0.13
+            pos_hint: {'center_x': 0.54, 'center_y': 0.29}
+
+        # LABEL
+        Label:
+            text: '/i-sa/'
+            size_hint: None, None
+            size: 100, 25
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+
+        # SPEAKER BUTTON
+        Button:
+            background_normal: 'images/speaker.png'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': 0.63, 'center_y': 0.3}
+            on_press: root.play_audio()
+
+<AlpabetoNextWindow>:
+    name: 'alpabetonextwindow'
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/second window.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Back button
+        Button:
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = "alpabeto"
+
+        # Alphabet buttons
+        Button:
+            background_normal: 'images/NA.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.90}
+            on_press: root.manager.current = "na"
+
+        Button:
+            background_normal: 'images/OH.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.90}
+            on_press: root.manager.current = "oo"
+
+        Button:
+            background_normal: 'images/PA.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.77}
+            on_press: root.manager.current = "pa"
+
+        Button:
+            background_normal: 'images/RA.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.77}
+            on_press: root.manager.current = "ra"
+
+        Button:
+            background_normal: 'images/SA.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.64}
+            on_press: root.manager.current = "sa"
+
+        Button:
+            background_normal: 'images/TA.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.64}
+            on_press: root.manager.current = "ga"
+
+        Button:
+            background_normal: 'images/UH.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.51}
+            on_press: root.manager.current = "uu"
+
+        Button:
+            background_normal: 'images/WA.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.51}
+            on_press: root.manager.current = "wa"
+
+        Button:
+            background_normal: 'images/YA.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.38}
+            on_press: root.manager.current = "ya"
+
+<AlpabetoWindow>:
+    name: 'alpabeto'
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/second window.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Back button
+        Button:
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.45, 'center_y': 0.1}
+            on_press:
+                root.manager.current = "filipino"
+
+        # Next button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.55, 'center_y': 0.1}
+            on_press:
+                root.manager.current = "alpabeto_next"
+
+        # Alphabet buttons
+        Button:
+            background_normal: 'images/AH.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.90}
+            on_press: root.manager.current = "a"
+
+        Button:
+            background_normal: 'images/BA.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.90}
+            on_press: root.manager.current = "ba"
+
+        Button:
+            background_normal: 'images/KA.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.77}
+            on_press: root.manager.current = "ka"
+
+        Button:
+            background_normal: 'images/DA.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.77}
+            on_press: root.manager.current = "da"
+
+        Button:
+            background_normal: 'images/EI.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.64}
+            on_press: root.manager.current = "ei"
+
+        Button:
+            background_normal: 'images/GA.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.64}
+            on_press: root.manager.current = "ga"
+
+        Button:
+            background_normal: 'images/HA.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.51}
+            on_press: root.manager.current = "ha"
+
+        Button:
+            background_normal: 'images/IH.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.51}
+            on_press: root.manager.current = "ih"
+
+        Button:
+            background_normal: 'images/LA.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.38}
+            on_press: root.manager.current = "la"
+
+        Button:
+            background_normal: 'images/MA.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.38}
+            on_press: root.manager.current = "ma"
+
+<BilangWindow>:
+    name: 'bilang'
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/second window.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return button
+        Button:
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = "filipino"
+
+        # Number buttons
+        Button:
+            background_normal: 'images/isaa.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.90}
+            on_press: root.manager.current = "isa"
+
+        Button:
+            background_normal: 'images/dalawaa.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.90}
+            on_press: root.manager.current = "dalawa"
+
+        Button:
+            background_normal: 'images/tatloo.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.77}
+            on_press: root.manager.current = "tatlo"
+
+        Button:
+            background_normal: 'images/apatt.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.77}
+            on_press: root.manager.current = "apat"
+
+        Button:
+            background_normal: 'images/limaa.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.64}
+            on_press: root.manager.current = "lima"
+
+        Button:
+            background_normal: 'images/animm.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.64}
+            on_press: root.manager.current = "anim"
+
+        Button:
+            background_normal: 'images/pitoo.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.51}
+            on_press: root.manager.current = "pito"
+
+        Button:
+            background_normal: 'images/waloo.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.51}
+            on_press: root.manager.current = "walo"
+
+        Button:
+            background_normal: 'images/siyamm.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.38}
+            on_press: root.manager.current = "siyam"
+
+        Button:
+            background_normal: 'images/sampuu.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.38}
+            on_press: root.manager.current = "sampu"
+
+<NumbersWindow>:
+    name: 'numbers'
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/second window.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return button
+        Button:
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = "english"
+
+        # Number buttons
+        Button:
+            background_normal: 'images/one.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.90}
+            on_press: root.manager.current = "one"
+
+        Button:
+            background_normal: 'images/two.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.90}
+            on_press: root.manager.current = "two"
+
+        Button:
+            background_normal: 'images/three.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.77}
+            on_press: root.manager.current = "three"
+
+        Button:
+            background_normal: 'images/four.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.77}
+            on_press: root.manager.current = "four"
+
+        Button:
+            background_normal: 'images/five.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.64}
+            on_press: root.manager.current = "five"
+
+        Button:
+            background_normal: 'images/six.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.64}
+            on_press: root.manager.current = "six"
+
+        Button:
+            background_normal: 'images/seven.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.51}
+            on_press: root.manager.current = "seven"
+
+        Button:
+            background_normal: 'images/eight.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.51}
+            on_press: root.manager.current = "eight"
+
+        Button:
+            background_normal: 'images/nine.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.38}
+            on_press: root.manager.current = "nine"
+
+        Button:
+            background_normal: 'images/ten.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.38}
+            on_press: root.manager.current = "ten"
+
+<AlphabetNextWindow>:
+    name: 'alphabet_next'
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/second window.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return button
+        Button:
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = "alphabet"
+
+        # N–Z Buttons
+        Button:
+            background_normal: 'images/EN.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.90}
+            on_press: root.manager.current = "n"
+
+        Button:
+            background_normal: 'images/OW.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.90}
+            on_press: root.manager.current = "o"
+
+        Button:
+            background_normal: 'images/PI.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.80}
+            on_press: root.manager.current = "p"
+
+        Button:
+            background_normal: 'images/KYU.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.80}
+            on_press: root.manager.current = "q"
+
+        Button:
+            background_normal: 'images/AR.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.70}
+            on_press: root.manager.current = "r"
+
+        Button:
+            background_normal: 'images/IS.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.70}
+            on_press: root.manager.current = "s"
+
+        Button:
+            background_normal: 'images/TI.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.60}
+            on_press: root.manager.current = "t"
+
+        Button:
+            background_normal: 'images/YU.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.60}
+            on_press: root.manager.current = "u"
+
+        Button:
+            background_normal: 'images/VI.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.50}
+            on_press: root.manager.current = "v"
+
+        Button:
+            background_normal: 'images/WE.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.5}
+            on_press: root.manager.current = "w"
+
+        Button:
+            background_normal: 'images/EX.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.4}
+            on_press: root.manager.current = "x"
+
+        Button:
+            background_normal: 'images/WHY.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.4}
+            on_press: root.manager.current = "y"
+
+        Button:
+            background_normal: 'images/ZI.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+            on_press: root.manager.current = "z"
+
+<AlphabetWindow>:
+    name: 'alphabet'
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/second window.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Return button
+        Button:
+            background_normal: 'images/return.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.45, 'center_y': 0.1}
+            on_press:
+                root.manager.current = "english"
+
+        # A–M Buttons
+        Button:
+            background_normal: 'images/EY.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.90}
+            on_press: root.manager.current = "ey"
+
+        Button:
+            background_normal: 'images/BI.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.90}
+            on_press: root.manager.current = "b"
+
+        Button:
+            background_normal: 'images/SI.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.80}
+            on_press: root.manager.current = "c"
+
+        Button:
+            background_normal: 'images/DI.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.80}
+            on_press: root.manager.current = "d"
+
+        Button:
+            background_normal: 'images/EH.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.70}
+            on_press: root.manager.current = "e"
+
+        Button:
+            background_normal: 'images/IF.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.70}
+            on_press: root.manager.current = "f"
+
+        Button:
+            background_normal: 'images/GI.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.60}
+            on_press: root.manager.current = "g"
+
+        Button:
+            background_normal: 'images/ITS.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.60}
+            on_press: root.manager.current = "h"
+
+        Button:
+            background_normal: 'images/AY.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.50}
+            on_press: root.manager.current = "i"
+
+        Button:
+            background_normal: 'images/JAY.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.50}
+            on_press: root.manager.current = "j"
+
+        Button:
+            background_normal: 'images/KEY.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.40}
+            on_press: root.manager.current = "k"
+
+        Button:
+            background_normal: 'images/EL.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.40}
+            on_press: root.manager.current = "l"
+
+        Button:
+            background_normal: 'images/EM.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.50, 'center_y': 0.30}
+            on_press: root.manager.current = "m"
+
+        # Next button
+        Button:
+            background_normal: 'images/next.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.55, 'center_y': 0.1}
+            on_press:
+                root.manager.current = "alphabet_next"
+
+<FilipinoWindow>:
+    name: 'filipino'
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/second window.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Alpabeto button
+        Button:
+            background_normal: 'images/alpabeto.png'
+            size_hint: 0.2, 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+            on_press:
+                root.manager.current = "alpabeto"
+
+        # Bilang button
+        Button:
+            background_normal: 'images/bilang.png'
+            size_hint: 0.2, 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+            on_press:
+                root.manager.current = "bilang"
+
+        # Home button
+        Button:
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = "home"
+
+<EnglishWindow>:
+    name: 'english'
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/second window.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Alphabet button
+        Button:
+            background_normal: 'images/alphabet.png'
+            size_hint: 0.2, 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+            on_press:
+                root.manager.current = "alphabet"
+
+        # Numbers button
+        Button:
+            background_normal: 'images/numbers.png'
+            size_hint: 0.2, 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+            on_press:
+                root.manager.current = "numbers"
+
+        # Home button
+        Button:
+            background_normal: 'images/home.png'
+            size_hint: 0.1, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = "home"
+
+<HomeWindow>:
+    name: 'home'
+    FloatLayout:
+
+        # Background
+        Image:
+            source: 'images/second window.png'
+            size_hint: 1, 1
+            fit_mode: 'fill'
+
+        # Filipino button
+        Button:
+            background_normal: 'images/Filipino.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.42, 'center_y': 0.2}
+            on_press:
+                root.manager.current = "filipino"
+
+        # English button
+        Button:
+            background_normal: 'images/English.png'
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x': 0.58, 'center_y': 0.2}
+            on_press:
+                root.manager.current = "english"
+
+
